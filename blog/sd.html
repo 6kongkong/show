@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="button">
+      <img
+        src="./image/02.jpg"
+        alt=""
+        id="pit"
+        style="width: 100px; height: 100px"
+      />
+    </div>
+    <script>
+              function change_pic(){
+      var button =document.getElementById("button");
+      var pit =document.getElementById("pit");
+
+      button.onclick =function(){
+      if(pit.getAttribute("src",2)=="./images/02.jpg"){
+      pit.setAttribute("src","https://s1.328888.xyz/2022/07/21/ldhJB.th.jpg");
+      }else{
+      pit.setAttribute("src","./images/02.jpg");
+      };
+    }
+}
+      change_pic();
+    </script>
+  </body>
+</html>

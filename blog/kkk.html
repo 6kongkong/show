@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #test{
+            position: absolute;
+            /* width: 200px;
+            height: 200px; */
+            /* background-color: red; */
+            z-index: 1;
+            
+            top: 200px;
+            left: 30%;
+            display: none;
+            
+        }
+       
+       
+    </style>
+</head>
+<body>
+    <img src="./image/02.jpg"  onclick="QQ()" style="width: 300px;" id="img">
+        <img src="./image/WeChat.jpg" alt="" id="test">
+    <script>
+        let flag =false
+        function QQ(){
+            document.getElementById('test').style.display="block";
+           flag=true
+           if (flag){
+            document.getElementById('img').style.opacity='0.1'
+           }
+        }
+        
+        
+    </script>
+</body>
+</html>

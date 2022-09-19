@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./home.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="https://s1.328888.xyz/2022/07/21/ldhJB.th.jpg">
+    <title>Hi.空空</title>
+  </head>
+  <body>
+    <!-- 中部大卡片 -->
+    <div class="container">
+      <!-- 导航 -->
+
+      <div class="above" id="above">
+        <nav>
+          <a href="../course/course.html">首页</a>
+          <a href="#">奋斗</a>
+          <a href="#">历程</a>
+          <a href="#">站点</a>
+        </nav>
+      </div>
+      <!-- 主体 -->
+      <div class="main">
+        <div class="below">
+          <!-- 卡片中上部 -->
+          <div class="content">
+            <img src="../image/02.jpg" alt="" class="one" />
+            <!-- 圆形头像 -->
+            <img
+              src="https://s1.328888.xyz/2022/07/21/ldhJB.th.jpg"
+              alt=""
+              class="two"
+              onclick="alert('你好，如果您有建议，下方请联系站主！')"
+              
+            />
+            <div class="name">空空</div>
+            <div class="moto">在该奋斗的岁月里，<br />对得起每一寸光阴</div>
+
+            <!-- 按钮 -->
+            <div class="gobutton">
+              <button>
+                <b
+                  ><a
+                    href="../Personal web page/index/index.html"
+                    target="_blank"
+                    >ps:JS打字机文字效果</a
+                  ></b
+                >
+              </button>
+            </div>
+          </div>
+
+          <!-- 卡片底部 -->
+
+          <div class="footer">
+            <!-- bilibili -->
+            <div>
+              <a
+                href="https://space.bilibili.com/1193409860?spm_id_from=333.1007.0.0"
+                ><img src="../image/b.png" alt=""
+              /></a>
+            </div>
+            <!-- qqemail -->
+            <div>
+              <a
+                href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=uImMiYiMjI_LgYj4ycmW29fV"
+                ><img src="../image/email.png" alt=""
+              /></a>
+            </div>
+            <!-- QQ -->
+            <div>
+              <a
+                href="http://wpa.qq.com/msgrd?v=3&uin=1410447390&site=qq&menu=yes"
+              >
+                <img src="../image/QQpng.png" alt="" />
+              </a>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h1>将中部卡片改为长方形盒子</h1>
+      <h2>背景流星动画</h2>
+      <H3>鼠标移动动画</H3>
+    </div>
+
+    <!-- 右侧时间栏 -->
+    <script>
+      Date.prototype.format = function (fmt) {
+        var o = {
+          "y+": this.getFullYear, //年
+          "M+": this.getMonth() + 1, //月份
+          "d+": this.getDate(), //日
+          "h+": this.getHours(), //小时
+          "m+": this.getMinutes(), //分
+          "s+": this.getSeconds(), //秒
+        };
+        if (/(y+)/.test(fmt))
+          fmt = fmt.replace(
+            RegExp.$1,
+            (this.getFullYear() + "").substr(4 - RegExp.$1.length)
+          );
+
+        for (var k in o)
+          if (new RegExp("(" + k + ")").test(fmt))
+            fmt = fmt.replace(
+              RegExp.$1,
+              (RegExp.$1.length = 1)
+                ? o[k]
+                : ("00" + o[k]).substr(("" + o[k]).length)
+            );
+
+        return fmt;
+      };
+      setInterval(
+        "document.getElementById('dateTime').innerHTML =(new Date()).format('yyyy/MM/dd hh:mm:ss');",
+        1000
+      );
+    </script>
+    <!--  ------------------------------时间 -->
+    <div class="data" id="dateTime"></div>
+  </body>
+
+
+
+
+
+
+  <!-- 提示框 -->
+  <!-- <script>
+    function er() {
+      alert("你好，如果您有修改的意见，下方请联系站主！");
+    }
+  </script> -->
+<!-- 导航栏背景颜色-->
+  <script>
+    const above = document.getElementById("above");
+
+    let a, b, c;
+    setInterval(function () {
+      let style = (above.style.backgroundColor =
+        "rgb(" + a + "," + b + "," + c + ")");
+      console.log(style);
+      a = Math.floor(Math.random() * 255);
+      b = Math.floor(Math.random() * 255);
+      c = Math.floor(Math.random() * 255);
+    }, 1500);
+  </script>
+</html>

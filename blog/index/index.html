@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://s1.328888.xyz/2022/07/21/ldhJB.th.jpg" />
+  <link rel="stylesheet" href="./index.css" />
+  <title>Hi！空空</title>
+</head>
+<!-- ---------------<br>风也萧萧，旗正飘飘  背景音乐 -->
+
+<body>
+  <div class="wrapper" id="wrapper">
+    <header></header>
+    <!-- 中部box -->
+    <div class="container">
+      <!-- 头像 -->
+      <div class="img">
+        <img src="https://s1.328888.xyz/2022/07/21/ldhJB.th.jpg" alt="空空" />
+      </div>
+      <div class="intro">
+        <div class="nickname">空空啊</div>
+        <div>
+          <p class="dip" id="dip">"日落尤其温柔 <b>·</b> 人间皆是浪漫"</p>
+        </div>
+      </div>
+      <div>地址；按钮切换背景</div>
+      <!-- 下不导航栏 -->
+      <div class="nav">
+        <nav><a href="../home/home.html">首页 </a></nav><b>·</b>
+        <nav><a href="#">QQ </nav><b>·</b></a>
+        <nav><a href="#">邮箱 </a></nav><b>·</b>
+        <nav><a href="#">关于</a></nav>
+      </div>
+
+      <!-- 音乐框 -->
+      <center>
+        <div class="play-img"><img src="../image/music.png"  class="music1" /></div>
+        <div class="play-music">
+          <span>推荐音乐</span><span><b>-</b>未知</span>
+        </div>
+        <!-- 进度条 -->
+        <div class="play-bar">
+          <div class="loaded" style="width: 3%"></div>
+          <div class="play-played" style="width: 0"></div>
+        </div>
+        <div class="play-time"><span>[00:00]</span>/<span>[03:00]</span></div>
+      </center>
+      <div class="text">
+        <p>"风停在窗边，嘱咐你要热爱这个世界啊！"</p>
+        <small>— · 空空啊</small>
+      </div>
+      <!-- 初始图片 -->
+      <center>
+        <ul id="footerbox" class="footbox">
+          <li > 
+            <img src="../image/WeChatpng.png" alt="" > WeChat
+          </li>
+          <li ><img src="../image/QQpng2.png" alt="" /> QQ</li>
+        </ul>
+      </center>
+    </div>
+    <!-- <footer></footer> -->
+  </div>
+  <!-- 弹出图片 -->
+  <div class="Dating">
+    <img src="../image/WeChat.jpg" alt="" style="display: none;" id="WC">
+    <img src="../image/QQ.jpg" alt="" style="display: none;" id="QQ">
+  </div>
+</body>
+<!-- 底部微信QQ  JS -->
+  <script>
+  let wrapper = document.querySelector('.wrapper')
+let footbox_1 = document.querySelector('.footbox')
+ let li_1 = footbox_1.children[0]
+ let li_2 = footbox_1.children[1]
+  let Dating = document.querySelector('.Dating')
+  let weImg1 = Dating.children[0]
+  let weImg2 = Dating.children[1]
+  let flag = true
+  // 微信
+  li_1.addEventListener('click',function(){
+   weImg1.style.display='block'
+      wrapper.style.opacity='0.4 '
+      
+      weImg1.addEventListener('click',function(){
+        if (flag= true){
+   weImg1.style.display='none'
+      wrapper.style.opacity='1 '
+      flag = false
+        }else{
+ weImg1.style.display='black'
+      wrapper.style.opacity='0.4 '
+      flag =true
+        }
+      })
+  })
+ // QQ
+  li_2.addEventListener('click',function(){
+   weImg2.style.display='block'
+      wrapper.style.opacity='0.4 '
+      
+      weImg2.addEventListener('click',function(){
+        if (flag= true){
+   weImg2.style.display='none'
+      wrapper.style.opacity='1 '
+      flag = false
+        }else{
+ weImg2.style.display='black'
+      wrapper.style.opacity='0.4 '
+      flag =true
+        }
+      })
+  })
+  </script>
+
+
+<!-- 暂停按钮 -->
+<script>
+  let play_img= document.querySelector('play-img')
+  let music_1 = document.querySelector('.music1')
+  let flag1 = false
+    music_1.addEventListener('click',function(){
+      
+   if(flag1){
+      music_1.src='../image/music1.png'
+      flag1 = false
+   }else{
+    music_1.src='../image/music.png'
+    flag1=true
+   }
+
+      // console.log(1);
+    })
+</script>
+
+
+
+
+</html>

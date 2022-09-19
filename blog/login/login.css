@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  background: linear-gradient(
+    45deg,
+    rgba(254, 172, 94, 0.5),
+    rgba(199, 121, 208, 0.5),
+    rgba(75, 192, 200, 0.5)
+  );
+}
+#canvas {
+  /* background: #000; */
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+span {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 72% 28%,
+    #fff 3px,
+    #ff7edf 8%,
+    #5b5b5b,
+    #1f77bb 100%
+  );
+  box-shadow: inset 0 0 6px #fff, inset 3px 0 6px #eaf5fc,
+    inset 2px -2px 10px #efcde6, inset 0 0 60px #f9f6de, 0 0 20px #fff;
+
+  /* background-color: skyblue; */
+  border-radius: 50%;
+  animation: myMove 4s linear infinite;
+}
+
+@keyframes myMove {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(10%, -1000%);
+  }
+  75% {
+    transform: translate(-20%, -1200%);
+  }
+  99% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-1800%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+input {
+  /*--------------------------- outline: none;去掉input的轮廓 */
+  outline: none;
+  /* padding: auto 10px; */
+  border: 3px solid #b0cfe9;
+  border-radius: 4px;
+  /* margin: 0px 5px ; */
+  /* color: #ccc; */
+  width: 60%;
+  height: 40px;
+  margin-bottom: 20px;
+  text-indent: 6px;
+}
+input:focus {
+  color: #b0cfe9;
+}
+input:focus::placeholder {
+  opacity: 0;
+}
+html,
+body {
+  height: 100%;
+}
+/*-------------------------- 最外层的大盒子-------- */
+.box {
+  width: 1050px;
+  height: 600px;
+  display: flex;
+  /* =--------------------相对定位 */
+  position: relative;
+  z-index: 2;
+  /* background-color: #fff; */
+  margin: auto;
+  /* ------------------圆角边框 */
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  /* =-------------------------盒子阴影 */
+  box-shadow: 4px 4px 3px rgb(0, 0, 0, 0.1);
+}
+
+/* --------------------滑动的盒子 */
+.pre-box {
+  /* ----------------宽度为最大盒子的一半 */
+  width: calc(1050px / 2);
+  height: 100%;
+  /* ----------绝对定位 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  background-color: #e6bee2;
+  box-shadow: 4px 4px 3px rgb(0, 0, 0, 0.1);
+  /* ----------动画过渡，先加速在减速 */
+  transition: 0.5s ease-in-out;
+}
+.pre-box h1 {
+  margin-top: 150px;
+  text-align: center;
+  letter-spacing: 5px;
+  color: white;
+  text-shadow: 4px 4px 3px rgb(0, 0, 0, 0.3);
+}
+.pre-box p {
+  height: 30px;
+  line-height: 30px;
+  margin: 10px 0;
+  font-weight: bolder;
+  text-align: center;
+  color: white;
+  text-shadow: 4px 4px 3px rgb(0, 0, 0, 0.1);
+}
+.img-box {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 20px auto;
+  text-shadow: 4px 4px 3px rgb(0, 0, 0, 0.3);
+}
+.img-box img {
+  width: 100%;
+  transition: 0.5s;
+  /* height: 100%; */
+}
+.login-from,
+.registered {
+  flex: 1;
+  height: 100%;
+}
+.title-box {
+  height: 300px;
+  line-height: 500px;
+}
+.title-box h1 {
+  text-align: center;
+  letter-spacing: 5px;
+  color: white;
+  text-shadow: 4px 4px 3px rgb(0, 0, 0, 0.5);
+}
+.input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn-box {
+  display: flex;
+  justify-content: center;
+}
+button {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  margin: auto 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #69b3f8;
+  color: white;
+}
+button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.btn-box p {
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+}
+.btn-box p:hover {
+  cursor: grabbing;
+  border-bottom: 2px solid white;
+}
+.login-from .tiaoguo {
+  margin: 20px 80px;
+}
+.login-from .tiaoguo a {
+  color: white;
+  text-decoration: none;
+}
+.login-from p a:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  /* color: skyblue; */
+  border-bottom: 2px solid white;
+}
